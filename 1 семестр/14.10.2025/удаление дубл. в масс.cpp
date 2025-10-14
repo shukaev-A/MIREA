@@ -15,7 +15,6 @@ void removeDuplicates(std::vector<int>& arr) {
 
     arr = result;
 
-    // Вывод обновлённого массива
     for (int num : arr) {
         std::cout << num << " ";
     }
