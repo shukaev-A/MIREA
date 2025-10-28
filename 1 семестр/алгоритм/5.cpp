@@ -5,17 +5,14 @@
 
 using namespace std;
 
-// Функция генерации следующего числа по методу фон Неймана (метод квадрата середины)
 int vonNeumann(int n) {
-    long long sq = (long long)n * n; // Квадрат числа
+    long long sq = (long long)n * n; 
     string sq_str = to_string(sq);
 
-    // Добавляем ведущие нули, чтобы получилось 10 символов
     while (sq_str.length() < 10) {
         sq_str = "0" + sq_str;
     }
 
-    // Берём средние 5 цифр
     int start = (sq_str.length() - 5) / 2;
     string middle_digits = sq_str.substr(start, 5);
 
@@ -25,7 +22,6 @@ int vonNeumann(int n) {
 int main() {
     int seed;
 
-    cout << "Введите пятизначное начальное число (начальное значение): ";
     cin >> seed;
 
     if (seed < 10000 || seed > 99999) {
