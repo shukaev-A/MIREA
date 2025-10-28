@@ -1,5 +1,7 @@
 #include <iostream>
 #include <vector>
+#include <random>
+#include <ctime>
 
 int main() {
     size_t size;
@@ -10,10 +12,12 @@ int main() {
         return 1;
     }
 
+    std::mt19937 gen(static_cast<unsigned int>(time(nullptr)));
+    std::uniform_int_distribution<int> dist(0, 100); 
+
     std::vector<int> arr(size);
-    std::cout << "Введите " << size << " чисел:" << std::endl;
     for (size_t i = 0; i < size; ++i) {
-        std::cin >> arr[i];
+        arr[i] = dist(gen);
     }
 
     double sum = 0;
@@ -34,7 +38,7 @@ int main() {
     }
     std::cout << std::endl;
 
-    std::cout << average << std::endl;
+    std::cout <<  average << std::endl;
 
     if (greaterThanAverage.empty()) {
         std::cout <<  std::endl;
