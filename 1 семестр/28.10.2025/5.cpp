@@ -5,8 +5,11 @@ int sum(int a, int b) {
 }
 
 int main() {
-    int x = 5;
-    int y = 7;
-    std::cout << "Сумма " << x << " и " << y << " равна " << sum(x, y) << std::endl;
+    int x, y;
+    std::cin >> x;
+    std::cin >> y;
+    
+    int result = sum(x, y);
+    std::cout <<  result << std::endl;
     return 0;
 }
