@@ -61,9 +61,9 @@ int main() {
     bool isMersennePrime = lucasLehmerTest(p);
 
     if (isMersennePrime)
-        cout << "Число Мерсенна M_" << p << " = 2^" << p << " - 1 является простым.\n";
+        cout <<   p << " prost.\n";
     else
-        cout << "Число Мерсенна M_" << p << " = 2^" << p << " - 1 не является простым.\n";
+        cout <<   p << " ne prost.\n";
 
     return 0;
 }
