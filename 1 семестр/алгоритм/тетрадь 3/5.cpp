@@ -1,6 +1,7 @@
 #include <iostream>
 #include <string>
 #include <algorithm>
+#include <chrono>
 
 std::string trimLeadingZeros(const std::string &str) {
     size_t pos = str.find_first_not_of('0');
@@ -98,6 +99,20 @@ std::string karatsuba(const std::string &x, const std::string &y) {
 int main() {
     std::string num1, num2;
     std::cin >> num1 >> num2;
-    std::cout << karatsuba(num1, num2) << "\n";
+
+// Засекаем время начала
+    auto start = std::chrono::high_resolution_clock::now();
+
+    std::string result = karatsuba(num1, num2);
+
+    // Засекаем время окончания
+    auto end = std::chrono::high_resolution_clock::now();
+
+    // Вычисляем разницу времени в микросекундах
+    auto duration = std::chrono::duration_cast<std::chrono::microseconds>(end - start);
+
+    std::cout << result << "\n";
+    std::cout << duration.count() << std::endl;
+
     return 0;
 }
