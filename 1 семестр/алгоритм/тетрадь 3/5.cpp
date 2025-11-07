@@ -102,12 +102,7 @@ std::string karatsuba(const std::string& x, const std::string& y) {
 int main() {
     std::string num1, num2;
     std::cout << "Введите первое большое число: ";
-    std::c
-
-
-
-
-in >> num1;
+    std::cin >> num1;
     std::cout << "Введите второе большое число: ";
     std::cin >> num2;
 
