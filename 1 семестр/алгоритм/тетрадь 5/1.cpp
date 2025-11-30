@@ -20,7 +20,7 @@ void reverseWords(const string &s, int start = 0) {
 
     reverseWords(s, end);
 
-    // Выводим текущее слово после возврата из рекурсии, чтобы инвертировать порядок
+    // Выводим текущее слово после возврата из рекурсии
     if (end <= n) {
         if (start > 0) cout << " ";
         cout << s.substr(start, end - start);
